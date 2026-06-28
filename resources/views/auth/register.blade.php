@@ -4,7 +4,7 @@
             @csrf
             <x-form.field label="Name" name="name" />
             <x-form.field label="E-mail" name="email" type="email" />
-            <x-form.field label="Password" name="password" type="password "/>
+            <x-form.field label="Password" name="password" type="password"/>
 
             <button class="btn mt-2 h-10 w-full" type="submit">Create Account</button>
         </form>
