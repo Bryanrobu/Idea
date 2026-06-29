@@ -8,6 +8,7 @@
 
         <div class="flex gap-x-5 items-center">
             @auth
+                <p>{{Auth::user()->name}}</p>
                 <form METHOD="POST" action="/logout">
                     @csrf
                     <button class="btn">

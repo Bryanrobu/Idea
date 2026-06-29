@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class SessionsController extends Controller
 {
@@ -12,7 +12,8 @@ class SessionsController extends Controller
         return view('auth.login');
     }
 
-    public function store(Request $request) {
+    public function store(Request $request)
+    {
         $attributes = request()->validate([
             'email' => ['required', 'string', 'email'],
             'password' => ['required', 'string'],
@@ -29,7 +30,8 @@ class SessionsController extends Controller
         return redirect()->intended('/')->with('success', 'You have successfully logged in.');
     }
 
-    public function destroy() {
+    public function destroy()
+    {
         auth()->logout();
 
         return redirect('/');
